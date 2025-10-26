@@ -1,0 +1,6 @@
+#!/bin/sh
+. /home/clearly/dwm/scripts/sb-colors.sh
+
+MEM=$(free -h | awk '/Mem:/ {print $3 "/" $2}' | sed 's/i//g')
+echo -n "$MEM_COLOR $MEM"
+

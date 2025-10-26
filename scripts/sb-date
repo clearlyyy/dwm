@@ -1,0 +1,6 @@
+#!/bin/sh
+. /home/clearly/dwm/scripts/sb-colors.sh
+
+DATE=$(date '+%a %b %d %I:%M %p')
+echo -n "$TIME_COLOR $DATE"
+

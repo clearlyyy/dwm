@@ -1,0 +1,15 @@
+#!/bin/sh
+. /home/clearly/dwm/scripts/sb-colors.sh
+
+if ! command -v pamixer >/dev/null 2>&1; then
+    echo -n "N/A"
+    exit 0
+fi
+
+if pamixer --get-mute | grep -q true; then
+    echo -n "$VOL_COLOR_MUTE MUTE"
+else
+    VOL=$(pamixer --get-volume-human)
+    echo -n "$VOL_COLOR_NORMAL $VOL"
+fi
+

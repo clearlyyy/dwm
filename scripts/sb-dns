@@ -1,0 +1,9 @@
+
+
+#!/bin/sh
+. /home/clearly/dwm/scripts/sb-colors.sh
+
+DNS=$(awk '/^nameserver/ {print $2}' /etc/resolv.conf | paste -sd "," -)
+[ -z "$DNS" ] && DNS="No DNS"
+echo -n "$DNS_COLOR $DNS"
+

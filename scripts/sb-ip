@@ -1,0 +1,7 @@
+#!/bin/sh
+. /home/clearly/dwm/scripts/sb-colors.sh
+
+IP=$(ip route get 1 2>/dev/null | awk '{print $7; exit}')
+[ -z "$IP" ] && IP="No IP"
+echo -n "$IP_COLOR $IP"
+
