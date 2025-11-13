@@ -85,6 +85,10 @@ void tagmon_with_pointer(const Arg *arg) {
     }
 }
 
+void donothing(const Arg *arg) {
+    // Do nothing lul
+}
+
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_d,      spawn,          {.v = dmenucmd } },
@@ -120,6 +124,7 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_e,      quit,           {0} },
+    { ControlMask,                   XK_f,      donothing,      {0} },
 };
 
 /* button definitions */
